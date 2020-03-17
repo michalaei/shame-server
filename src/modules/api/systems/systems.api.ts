@@ -1,5 +1,5 @@
-import {Application, Request, Response} from "express";
-import {DbConnector} from "../../db/db-connector";
+import {Application, Request, Response} from 'express';
+import {DbConnector} from '../../db/db-connector';
 
 export class SystemsApi {
     static init(app: Application) {
@@ -8,8 +8,8 @@ export class SystemsApi {
     }
 
     static async getSystems(req: Request, res: Response) {
-        let result = await DbConnector.query('SELECT * FROM public.servers');
         let reality = req.headers.reality;
+        let result = await DbConnector.query(`SELECT * FROM reality${reality}.servers`);
         console.log('Incoming request - Get All systems, Reality:', reality);
         res.send(result.rows);
     }

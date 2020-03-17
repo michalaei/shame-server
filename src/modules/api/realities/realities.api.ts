@@ -1,5 +1,5 @@
-import {Application, Request, Response} from "express";
-import {DbConnector} from "../../db/db-connector";
+import {Application, Request, Response} from 'express';
+import {DbConnector} from '../../db/db-connector';
 
 export class RealitiesApi {
     static init(app: Application) {
