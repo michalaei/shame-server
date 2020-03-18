@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "start":  "node .",
-    "debug":  "npm run prestart && node --inspect .",
+    "start": "node .",
+    "debug": "npm run prestart && node --inspect .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "michal",
@@ -16,11 +16,13 @@
     "@types/pg": "^7.14.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "pg": "^7.18.2"
+    "pg": "^7.18.2",
+    "ws": "^7.2.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",
     "@types/node": "^13.9.1",
+    "@types/ws": "^7.2.2",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   }
